@@ -12,10 +12,11 @@ import { themeContext } from "./context/themeContext";
 import Contacts from './pages/Contacts.jsx/Contacts';
 import Home from './pages/Home/Home';
 import Products from './pages/Products/Products';
+import Soft404 from './pages/Soft404/Soft404';
+import Registrarse from './pages/Registro/Registrarse';
 
 //Icono
-import icono from '../src/img/icono.png'
-
+import icono from '../src/img/icono.png';
 
 function App() {
 
@@ -55,6 +56,9 @@ function App() {
               <li className="nav-item">
                 <Link to={"/contacto"} className="text-decoration-none text-black fs-5 me-4">{idioma.items.contact}</Link>
               </li>
+              <li className="nav-item">
+                <Link to={"/registrarse"} className="text-decoration-none text-black fs-5 me-4">{idioma.items.registrarse}</Link>
+              </li>
             </ul>
           </div>
 
@@ -78,6 +82,9 @@ function App() {
         <Route path='/' element={<Home/>}></Route>
         <Route path='/productos' element={<Products/>}></Route>
         <Route path='/contacto' element={<Contacts/>}></Route>
+        <Route path='/registrarse' element={<Registrarse/>}></Route>
+        <Route path='/productos/:nombre' element={<Products/>} />
+        <Route path='*' element={<Soft404/>} />
       </Routes>
 
       {/* Footer */}

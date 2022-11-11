@@ -3,6 +3,7 @@
     "items" : {
         "home" : "Home",
         "products" : "Products",
-        "contact" : "Contact"
+        "contact" : "Contact",
+        "registrarse" : "Register"
     }
 }
