@@ -38,20 +38,20 @@ function App() {
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav m-auto mb-2 mb-lg-0">
               <li className="nav-item me-2">
-                <Link to={"/"} className="text-decoration-none text-black fs-5">Home</Link>
+                <Link to={"/"} className="text-decoration-none text-black fs-5 me-4">Home</Link>
               </li>
               <li className="nav-item me-2">
-                <Link to={"/productos"} className="text-decoration-none text-black fs-5">Productos</Link>
+                <Link to={"/productos"} className="text-decoration-none text-black fs-5 me-4">Productos</Link>
               </li>
               <li className="nav-item">
-                <Link to={"/contacto"} className="text-decoration-none text-black fs-5">Contacto</Link>
+                <Link to={"/contacto"} className="text-decoration-none text-black fs-5 me-4">Contacto</Link>
               </li>
             </ul>
           </div>
 
           {/* Idiomas */}
-          <div>
-            <select name="" id="" className="form-control">
+          <div className='me-4'>
+            <select name="" id="" className="form-control ">
               <option value="Es" selected>Es</option>
               <option value="En">En</option>
               <option value="Fr">Fr</option>
@@ -72,7 +72,7 @@ function App() {
       </Routes>
 
       {/* Footer */}
-      <div className="d-flex justify-content-around align-items-center flex-column p-5 mt-5 bg-primary">
+      <div className="d-flex justify-content-around align-items-center flex-column p-5 mt-5" style={{ backgroundColor:"#a5eea0"}}>
         <div>
           <a href="" target="_blank">
             <svg className="me-4 bi bi-instagram"  xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" viewBox="0 0 16 16">
@@ -93,9 +93,7 @@ function App() {
           </a>
         </div>
 
-        <p className="mt-2">
-          &copf; Todos los derechos reservados - 2022
-        </p>
+        <p className="mt-2">&copy; Todos los derechos reservados - 2022</p>
       </div>
 
         

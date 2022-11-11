@@ -8,7 +8,9 @@ export default function Products() {
         <div className='container'>
             <h1 className='mt-5 text-center'>Productos</h1>
             <hr />
-            <Cards/>
+            <div className='d-flex d-wrap gap-2'>
+              <Cards/>
+            </div>
         </div>
     </>
   )
