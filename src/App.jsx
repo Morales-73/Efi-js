@@ -1,3 +1,5 @@
+import React, {useState} from 'react';
+
 //React Router
 import { Routes, Route, Link } from 'react-router-dom'
 
@@ -20,6 +22,13 @@ function App() {
   const {idioma, changeLeng} = useContext(langcontext)
   const {theme, changeTheme} = useContext(themeContext)
 
+  const [value,setValue] = useState('es')
+
+  const handleValue = (e) => {
+    const valueSelect = e.target.value
+    changeLeng(valueSelect)
+  }
+
   return (
     <>
 
@@ -38,29 +47,29 @@ function App() {
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav m-auto mb-2 mb-lg-0">
               <li className="nav-item me-2">
-                <Link to={"/"} className="text-decoration-none text-black fs-5">Home</Link>
+                <Link to={"/"} className="text-decoration-none text-black fs-5">{idioma.items.home}</Link>
               </li>
               <li className="nav-item me-2">
-                <Link to={"/productos"} className="text-decoration-none text-black fs-5">Productos</Link>
+                <Link to={"/productos"} className="text-decoration-none text-black fs-5">{idioma.items.products}</Link>
               </li>
               <li className="nav-item">
-                <Link to={"/contacto"} className="text-decoration-none text-black fs-5">Contacto</Link>
+                <Link to={"/contacto"} className="text-decoration-none text-black fs-5">{idioma.items.contact}</Link>
               </li>
             </ul>
           </div>
 
           {/* Idiomas */}
           <div>
-            <select name="" id="" className="form-control">
-              <option value="Es" selected>Es</option>
-              <option value="En">En</option>
-              <option value="Fr">Fr</option>
+            <select name="" id="" onChange={handleValue} className="form-control">
+              <option value="es" defaultValue>Es</option>
+              <option value="en">En</option>
+              <option value="fr">Fr</option>
             </select>
           </div>
 
           {/* Theme */}
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+          <div className="form-check form-switch">
+            <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
           </div>
         </div>
       </nav>

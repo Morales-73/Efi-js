@@ -1,3 +1,8 @@
 {
-    "welcome" : "Hello World"
+    "welcome" : "Hello World",
+    "items" : {
+        "home" : "Home",
+        "products" : "Products",
+        "contact" : "Contact"
+    }
 }
