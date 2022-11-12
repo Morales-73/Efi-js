@@ -1,23 +1,23 @@
 import React, {useState} from 'react'
-import Ingles from "../lang/en-US.json"
-import Español from "../lang/es-ES.json"
+import {eng} from "../lang/en-US"
+import {esp} from "../lang/es-ES"
 
 const langcontext = React.createContext()
 
 function LangProvider({children}) {
 
-    const [idioma, setIdioma] = useState(Español)
+    const [idioma, setIdioma] = useState(esp)
 
     const changeLeng = (len)=> {
         switch (len) {
             case 'es':
-                setIdioma(Español)
+                setIdioma(esp)
                 break;
             case 'en':
-                setIdioma(Ingles)
+                setIdioma(eng)
                 break
             default:
-                setIdioma(Español);
+                setIdioma(esp);
         }
     }
 
