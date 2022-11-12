@@ -1,8 +1,8 @@
 {
-    "bienvenida" : "Hello World",
     "items" : {
         "home" : "Home",
         "productos" : "Products",
-        "contacto" : "Contact"
+        "contacto" : "Contact",
+        "registrarse" : "Register"
     }
 }
