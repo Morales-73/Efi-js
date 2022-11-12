@@ -1,8 +1,12 @@
 {
-    "welcome" : "Hola Mundo",
     "items" : {
         "home" : "Home",
-        "products" : "Productos",
-        "contact" : "Contacto"
-    }
+        "productos" : "Productos",
+        "contacto" : "Contacto"
+    },
+    "productos" : ["sabores","postres","palitos","bombones"],
+    "sabores" : ["Chocolate","Chocolate blanco","Chocolate almendrado","Dulce de leche","Durazno","Limon"],
+    "postres" : ["Almendrado","Cassata","cheesecake","Crocantino","Delicia","Lemonpie"],
+    "palitos" : ["Bombon", "Crema americana", "Crema frutilla","Agua naranja", "Agua frutilla","Agua pico dulce"],
+    "bombones" : ["Crocante","Escoces","Split","Suizo"]
 }

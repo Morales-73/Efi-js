@@ -23,17 +23,23 @@ function App() {
   const {theme, changeTheme} = useContext(themeContext)
 
   const [value,setValue] = useState('es')
+  const [valueTheme,setValueTheme] = useState(true)
 
   const handleValue = (e) => {
     const valueSelect = e.target.value
     changeLeng(valueSelect)
   }
 
+  const handleSwitch = (e) => {
+    setValueTheme(!valueTheme)
+    changeTheme(valueTheme)
+  }
+
   return (
     <>
 
       {/* Navbar */}
-      <nav className="navbar shadow-sm p-2 sticky-top navbar-expand-lg bg-white">
+      <nav className={`navbar shadow-sm p-4 sticky-top navbar-expand-lg bg-${theme.theme}`}>
         <div className="container">
           {/* Icono */}
           <div>
@@ -47,29 +53,28 @@ function App() {
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav m-auto mb-2 mb-lg-0">
               <li className="nav-item me-2">
-                <Link to={"/"} className="text-decoration-none text-black fs-5 me-4">{idioma.items.home}</Link>
+                <Link to={"/"} className={`text-decoration-none text-${theme.color} fs-5 me-4`}>{idioma.items.home}</Link>
               </li>
               <li className="nav-item me-2">
-                <Link to={"/productos"} className="text-decoration-none text-black fs-5 me-4">{idioma.items.products}</Link>
+                <Link to={"/productos"} className={`text-decoration-none text-${theme.color} fs-5 me-4`}>{idioma.items.productos}</Link>
               </li>
               <li className="nav-item">
-                <Link to={"/contacto"} className="text-decoration-none text-black fs-5 me-4">{idioma.items.contact}</Link>
+                <Link to={"/contacto"} className={`text-decoration-none text-${theme.color} fs-5 me-4`}>{idioma.items.contacto}</Link>
               </li>
             </ul>
           </div>
 
           {/* Idiomas */}
           <div className='me-4'>
-            <select name="" id="" onChange={handleValue} className="form-control ">
+            <select name="" id="" onChange={handleValue} className="form-control">
               <option value="es" defaultValue>Es</option>
               <option value="en">En</option>
-              <option value="fr">Fr</option>
             </select>
           </div>
 
           {/* Theme */}
           <div className="form-check form-switch">
-            <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+            <input className="form-check-input" onClick={handleSwitch} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
           </div>
         </div>
       </nav>

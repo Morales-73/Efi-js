@@ -9,14 +9,14 @@ function ThemeProvider({children}) {
 
     const changeTheme = (theme)=> {
         switch (theme) {
-            case 'white':
-                setTheme({theme : "white", color : "black"})
+            case false:
+                setTheme({theme : "white", color : "dark"})
                 break;
-            case 'black':
-                setTheme({theme : "zinc-700", color : "white"})
+            case true:
+                setTheme({theme : "dark", color : "white"})
                 break
             default:
-                setTheme({theme : "white", color : "black"});
+                setTheme({theme : "white", color : "dark"});
         }
     }
 

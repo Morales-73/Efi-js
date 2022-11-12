@@ -15,13 +15,13 @@ export default function Carousel() {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={carousel1} style={{objectFit: "cover", height:"50rem"}} className="d-block w-100" alt="..."/>
+            <img src={carousel1} style={{objectFit: "cover", height:"55rem"}} className="d-block w-100" alt="..."/>
           </div>
           <div className="carousel-item">
-            <img src={carousel2} style={{objectFit: "cover", height:"50rem"}} className="d-block w-100" alt="..."/>
+            <img src={carousel2} style={{objectFit: "cover", height:"55rem"}} className="d-block w-100" alt="..."/>
           </div>
           <div className="carousel-item">
-            <img src={carousel3} style={{objectFit: "cover", height:"50rem"}}  className="d-block w-100" alt="..."/>
+            <img src={carousel3} style={{objectFit: "cover", height:"55rem"}}  className="d-block w-100" alt="..."/>
           </div>
         </div>
         <button className="carousel-control-prev " type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
