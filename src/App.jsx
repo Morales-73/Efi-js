@@ -83,7 +83,8 @@ function App() {
         <Route path='/productos' element={<Products/>}></Route>
         <Route path='/contacto' element={<Contacts/>}></Route>
         <Route path='/registrarse' element={<Registrarse/>}></Route>
-        <Route path='/productos/:nombre' element={<Products/>} />
+        {/* <Route path='/productos/:nombre' element={<Products/>} /> */}
+        <Route path={{ pathname: "/detailsproduct/:id" }}><DetailsProduct /></Route>
         <Route path='*' element={<Soft404/>} />
       </Routes>
 
