@@ -12,14 +12,14 @@ import tiramisu from '../../img/postres/postres-tiramisu.jpg';
 
 export default function Postres() {
   const detPostres = [
-    {id: 2, name: 'Almendrado', imgProd: postreAlmendra},
-    {id: 3, name: 'Cassata', imgProd: cassata},
-    {id: 4, name: 'Cheesecake', imgProd: cheesecake},
-    {id: 5, name: 'Crocantino', imgProd: crocantino},
-    {id: 6, name: 'Delicia', imgProd: delicia},
-    {id: 7, name: 'Lemon Pie', imgProd: lemonPie},
-    {id: 8, name: 'Semi Frio de Chocolate', imgProd: semiFrioChoc},
-    {id: 9, name: 'Tiramisú', imgProd: tiramisu}
+    {id: 1, name: 'Almendrado', imgProd: postreAlmendra},
+    {id: 2, name: 'Cassata', imgProd: cassata},
+    {id: 3, name: 'Cheesecake', imgProd: cheesecake},
+    {id: 4, name: 'Crocantino', imgProd: crocantino},
+    {id: 5, name: 'Delicia', imgProd: delicia},
+    {id: 6, name: 'Lemon Pie', imgProd: lemonPie},
+    {id: 7, name: 'Semi Frio de Chocolate', imgProd: semiFrioChoc},
+    {id: 8, name: 'Tiramisú', imgProd: tiramisu}
   ]
 
   return (
