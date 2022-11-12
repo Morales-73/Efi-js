@@ -1,4 +1,5 @@
 import React, {useContext} from 'react'
+import {Link} from 'react-router-dom'
 import sabores from '../../img/sabores/helado_sabores.jpg';
 import postres from '../../img/postres/postre.jpg';
 import palitos from '../../img/palitos/palito_helado.jpg';
@@ -23,7 +24,8 @@ export default function Catalogue() {
                             <div className={`card-body bg-${theme.theme}`}>
                                 <h5 className={`card-title text-${theme.color}`}>Card title</h5>
                                 <p className={`card-text text-${theme.color}`}>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                                {/* <a href="#" className="btn btn-primary" >Go somewhere</a> */}
+                                <Link to={"/productos/sabores"} > Ver mas</Link>
                             </div>
                         </div>
                     )}

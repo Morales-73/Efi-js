@@ -53,16 +53,16 @@ const Layout = () =>{
                         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                             <ul className="navbar-nav m-auto mb-2 mb-lg-0">
                                 <li className="nav-item me-2">
-                                    <Link to={"/"} className={`text-decoration-none text-${theme.color} fs-5 me-4`}>{items.home}</Link>
+                                    <Link to={"/"} className={`text-decoration-none text-${theme.color} fs-5 me-5`}>{items.home}</Link>
                                 </li>
                                 <li className="nav-item me-2">
-                                    <Link to={"/productos"} className={`text-decoration-none text-${theme.color} fs-5 me-4`}>{items.productos}</Link>
+                                    {/* <Link to={"/productos"} className={`text-decoration-none text-${theme.color} fs-5 me-4`}>{items.productos}</Link> */}
                                 </li>
                                 <li className="nav-item">
-                                    <Link to={"/contacto"} className={`text-decoration-none text-${theme.color} fs-5 me-4`}>{items.contacto}</Link>
+                                    <Link to={"/contacto"} className={`text-decoration-none text-${theme.color} fs-5 me-5`}>{items.contacto}</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to={"/registrarse"} className={`text-decoration-none text-${theme.color} fs-5 me-4`}>{items.registrarse}</Link>
+                                    <Link to={"/registrarse"} className={`text-decoration-none text-${theme.color} fs-5`}>{items.registrarse}</Link>
                                 </li>
                             </ul>
                         </div>
