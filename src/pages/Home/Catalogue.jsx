@@ -10,7 +10,12 @@ export default function Catalogue() {
 
     const {theme} = useContext(themeContext)
 
-    const productos = [sabores,postres,palitos,bombones]
+    const productos = [
+        {id: 1, name:'sabores', titulo: 'Sabores' , imgProd: sabores},
+        {id: 2, name:'postres', titulo: 'Postres' , imgProd: postres},
+        {id: 3, name:'palitos', titulo: 'Palitos' , imgProd: palitos},
+        {id: 4, name:'bombones', titulo: 'Bombones' , imgProd: bombones}
+    ]
 
   return (
     <>
@@ -19,13 +24,13 @@ export default function Catalogue() {
                 <h1 className={`fs-3 text-${theme.color}`}>Nuestros productos</h1>
                 <div className="d-flex justify-content-center align-items-center flex-wrap gap-4">
                     {productos.map(p =>
-                        <div className="card" style={{ width: "18rem"}}>
-                            <img src={p} className="card-img-top" alt="..." style={{height: '186px'}} />
+                        <div className="card" style={{ width: "18rem"}} key={p.id}>
+                            <img src={p.imgProd} className="card-img-top" alt="..." style={{height: '186px'}} />
                             <div className={`card-body bg-${theme.theme}`}>
-                                <h5 className={`card-title text-${theme.color}`}>Card title</h5>
+                                <h5 className={`card-title text-${theme.color}`}>{p.titulo}</h5>
                                 <p className={`card-text text-${theme.color}`}>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 {/* <a href="#" className="btn btn-primary" >Go somewhere</a> */}
-                                <Link to={"/productos/sabores"} > Ver mas</Link>
+                                <Link to={`/productos/${p.name}`} > Ver mas</Link>
                             </div>
                         </div>
                     )}

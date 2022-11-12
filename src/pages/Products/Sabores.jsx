@@ -1,86 +1,50 @@
-import React from 'react'
+import React from 'react';
 
 // Imagenes
-import anana from '../../img/sabores/anana.png'
-import chocolateBlanco from '../../img/sabores/choco_blanco.png'
-import chocolate from '../../img/sabores/chocolate.png'
-import chocolateAlmendras from '../../img/sabores/chocolate_almendras.png'
-import dulceDeLeche from '../../img/sabores/ddl.png'
-import durazno from '../../img/sabores/durazno.png'
-import FlanDulceDeLeche from '../../img/sabores/flan_dulce_leche.png'
-import granizado from '../../img/sabores/granizado.png'
-import limon from '../../img/sabores/limon.png'
-import naranjaMango from '../../img/sabores/naranja_mango.png'
-import vainilla from '../../img/sabores/vainilla.png'
-import mentaGranizada from '../../img/sabores/menta-granizada.jpg'
+import anana from '../../img/sabores/anana.png';
+import chocolateBlanco from '../../img/sabores/choco_blanco.png';
+import chocolate from '../../img/sabores/chocolate.png';
+import chocolateAlmendras from '../../img/sabores/chocolate_almendras.png';
+import dulceDeLeche from '../../img/sabores/ddl.png';
+import durazno from '../../img/sabores/durazno.png';
+import flanDulceDeLeche from '../../img/sabores/flan_dulce_leche.png';
+import granizado from '../../img/sabores/granizado.png';
+import limon from '../../img/sabores/limon.png';
+import naranjaMango from '../../img/sabores/naranja_mango.png';
+import vainilla from '../../img/sabores/vainilla.png';
+import mentaGranizada from '../../img/sabores/menta-granizada.jpg';
 
 
 export default function Sabores() {
+  const detSabores = [
+    {id: 1, name: 'Anana', imgProd: anana},
+    {id: 2, name: 'Chocolate Blanco', imgProd: chocolateBlanco},
+    {id: 3, name: 'Chocolate', imgProd: chocolate},
+    {id: 4, name: 'Chocolate con Almendras', imgProd: chocolateAlmendras},
+    {id: 5, name: 'Dulce de Leche', imgProd: dulceDeLeche},
+    {id: 6, name: 'Durazno', imgProd: durazno},
+    {id: 7, name: 'Flan con Dulce de Leche', imgProd: flanDulceDeLeche},
+    {id: 8, name: 'Granizado', imgProd: granizado},
+    {id: 9, name: 'Limón', imgProd: limon},
+    {id: 10, name: 'Naranja Mango', imgProd: naranjaMango},
+    {id: 11, name: 'Vainilla', imgProd: vainilla},
+    {id: 12, name: 'Menta Granizada', imgProd: mentaGranizada}
+  ]
+
   return (
     <>
-        <h1 className="text-center mt-5 mb-5">Sabores</h1>
-        
+      <h1 className="text-center mt-5 mb-5">Sabores</h1>
+      
         <div className="container">
-          <hr className="mb-5" />
-
-          <div className="d-flex justify-content-center align-items-center flex-wrap gap-2 border rounded-5 p-4">
-
+        {/* <hr className="mb-5" /> */}
+        <div className="d-flex justify-content-center align-items-center flex-wrap gap-2 border rounded-5 p-4">
+          {detSabores.map(s =>
             <div>
-              <img className="rounded-4" src={anana} style={{width:"400px", height:"195px"}} style={{width:"400px", height:"195px"}} alt="img" />
-              <h4 className="text-center">Ananá</h4>
+              <img className="rounded-4" src={s.imgProd} style={{width:"400px", height:"195px"}} alt="img" />
+              <h4 className="text-center">{s.name}</h4>
             </div>
-
-            <div>
-              <img src={chocolateBlanco} style={{width:"400px", height:"195px"}} alt="img" />
-              <h4></h4>
-            </div>
-
-            <div>
-              <img src={chocolate} style={{width:"400px", height:"195px"}} alt="img" />
-              <h4></h4>
-            </div>
-            <div>
-              <img src={chocolateAlmendras} style={{width:"400px", height:"195px"}} alt="img" />
-              <h4></h4>
-            </div>
-            <div>
-              <img src={dulceDeLeche} style={{width:"400px", height:"195px"}} alt="img" />
-              <h4></h4>
-            </div>
-            <div>
-              <img src={durazno} style={{width:"400px", height:"195px"}} alt="img" />
-              <h4></h4>
-            </div>
-            <div>
-              <img src={FlanDulceDeLeche} style={{width:"400px", height:"195px"}} alt="img"/>
-              <h4></h4>
-            </div>
-            <div>
-              <img src={granizado} style={{width:"400px", height:"195px"}} alt="img" />
-              <h4></h4>
-            </div>
-            <div>
-              <img src={limon} style={{width:"400px", height:"195px"}} alt="img" />
-              <h4></h4>
-            </div>
-
-            <div>
-              <img src={naranjaMango} style={{width:"400px", height:"195px"}} alt="img" />
-              <h4></h4>
-            </div>
-
-            <div>
-              <img src={vainilla} style={{width:"400px", height:"195px"}} alt="img" />
-              <h4></h4>
-            </div>
-
-            <div>
-              <img src={mentaGranizada} style={{width:"400px", height:"195px"}} alt="img" />
-              <h4></h4>
-            </div>
-          </div>
-
-
+          )}
+        </div>
         </div>
     </>
   )
