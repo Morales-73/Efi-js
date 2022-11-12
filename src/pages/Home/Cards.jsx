@@ -1,10 +1,15 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import anana from '../../img/sabores/anana.png'
 import flanDulceDeLeche from '../../img/sabores/flan_dulce_leche.png'
 import ChocolateAlmendras from '../../img/sabores/chocolate_almendras.png'
 import naranjaMango from '../../img/sabores/naranja_mango.png'
 
+import { themeContext } from '../../context/themeContext'
+
 export default function Cards() {
+
+    const {theme} = useContext(themeContext)
+
   return (
     <>
           <div className="container mt-5 shadow p-4">

@@ -10,18 +10,19 @@ import Layout from './pages/Layout/Layout';
 
 function App() {
   return (
-   
-      <Routes>
-        <Route path='/' element={<Layout/>}>
-        <Route path='/' element={<Home/>}></Route>
-        <Route path='/productos' element={<Products/>}></Route>
-        <Route path='/contacto' element={<Contacts/>}></Route>
-        <Route path='/registrarse' element={<Registrarse/>}></Route>
-        {/* <Route path='/productos/:nombre' element={<Products/>} /> */}
-        {/* <Route path={{ pathname: "/detailsproduct/:id" }}><DetailsProduct /></Route> */}
-        <Route path='*' element={<Soft404/>} />
-        </Route>
-      </Routes>
+    <>
+        <Routes>
+          <Route path='/' element={<Layout />}>
+            <Route path='/' element={<Home />}></Route>
+            <Route path='/productos' element={<Products />}></Route>
+            <Route path='/contacto' element={<Contacts />}></Route>
+            <Route path='/registrarse' element={<Registrarse />}></Route>
+            {/* <Route path='/productos/:nombre' element={<Products/>} /> */}
+            {/* <Route path={{ pathname: "/detailsproduct/:id" }}><DetailsProduct /></Route> */}
+            <Route path='*' element={<Soft404 />} />
+          </Route>
+        </Routes>
+    </>
 
   );
 }

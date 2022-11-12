@@ -1,6 +1,11 @@
+import { useContext } from 'react';
+import { themeContext } from '../../context/themeContext';
 import iceCream from '../../img/ice-cream.jpg';
 
 function Registrarse(){
+
+    const {theme} = useContext(themeContext)
+
     return(<>
             <div className="container vh-100">
                 <div className="row d-flex justify-content-center align-items-center mt-5">
