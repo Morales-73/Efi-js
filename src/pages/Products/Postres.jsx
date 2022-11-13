@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { themeContext } from '../../context/themeContext';
 
 // Imagenes
 import postreAlmendra from '../../img/postres/postres-almendrado.jpg';
@@ -11,6 +12,9 @@ import semiFrioChoc from '../../img/postres/postres-semifriochocolate.jpg';
 import tiramisu from '../../img/postres/postres-tiramisu.jpg';
 
 export default function Postres() {
+
+  const {theme} = useContext(themeContext)
+
   const detPostres = [
     {id: 1, name: 'Almendrado', imgProd: postreAlmendra},
     {id: 2, name: 'Cassata', imgProd: cassata},
@@ -24,15 +28,15 @@ export default function Postres() {
 
   return (
     <>
-      <h1 className="text-center mt-5 mb-5">Postres</h1>
+      <h1 className={`text-center mt-5 text-${theme.color}`}>Postres</h1>
       
-        <div className="container">
+        <div className="container mb-5 p-5">
         {/* <hr className="mb-5" /> */}
-        <div className="d-flex justify-content-center align-items-center flex-wrap gap-2 border rounded-5 p-4">
+        <div className="d-flex justify-content-evenly align-items-center flex-wrap border rounded-5 p-4">
           {detPostres.map(dp =>
             <div>
               <img className="rounded-4" src={dp.imgProd} style={{width:"300px", height:"250px"}} alt="img" />
-              <h4 className="text-center">{dp.name}</h4>
+              <h4 className={`text-center text-${theme.color}`}>{dp.name}</h4>
             </div>
           )}
         </div>

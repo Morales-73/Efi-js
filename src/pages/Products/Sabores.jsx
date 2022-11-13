@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
 // Imagenes
 import anana from '../../img/sabores/anana.png';
@@ -14,8 +14,13 @@ import naranjaMango from '../../img/sabores/naranja_mango.png';
 import vainilla from '../../img/sabores/vainilla.png';
 import mentaGranizada from '../../img/sabores/menta-granizada.jpg';
 
+import { themeContext } from '../../context/themeContext';
+
 
 export default function Sabores() {
+
+  const {theme} = useContext(themeContext)
+
   const detSabores = [
     {id: 1, name: 'Anana', imgProd: anana},
     {id: 2, name: 'Chocolate Blanco', imgProd: chocolateBlanco},
@@ -33,18 +38,17 @@ export default function Sabores() {
 
   return (
     <>
-      <h1 className="text-center mt-5 mb-5">Sabores</h1>
-      
-        <div className="container">
-        {/* <hr className="mb-5" /> */}
-        <div className="d-flex justify-content-center align-items-center flex-wrap gap-2 border rounded-5 p-4">
-          {detSabores.map(s =>
-            <div>
-              <img className="rounded-4" src={s.imgProd} style={{width:"400px", height:"195px"}} alt="img" />
-              <h4 className="text-center">{s.name}</h4>
-            </div>
-          )}
-        </div>
+        <h1 className={`text-center mt-5 text-${theme.color}`}>Sabores</h1>
+        <div className="container mb-5 p-5">
+          {/* <hr className="mb-5" /> */}
+          <div className="d-flex justify-content-evenly align-items-center flex-wrap border rounded-5 p-4">
+            {detSabores.map(s =>
+              <div>
+                <img className="rounded-4" src={s.imgProd} style={{width:"400px", height:"195px"}} alt="img" />
+                <h4 className={`text-center text-${theme.color}`}>{s.name}</h4>
+              </div>
+            )}
+          </div>
         </div>
     </>
   )

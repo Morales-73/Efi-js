@@ -30,7 +30,7 @@ export default function Catalogue() {
                                 <h5 className={`card-title text-${theme.color}`}>{p.titulo}</h5>
                                 <p className={`card-text text-${theme.color}`}>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 {/* <a href="#" className="btn btn-primary" >Go somewhere</a> */}
-                                <Link to={`/productos/${p.name}`} > Ver mas</Link>
+                               <Link to={`/productos/${p.name}`} className={`btn btn-outline-primary text-decoration-none text-${theme.color}`}> Ver mas</Link>
                             </div>
                         </div>
                     )}

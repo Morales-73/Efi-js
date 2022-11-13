@@ -10,6 +10,8 @@ import { themeContext } from "../../context/themeContext";
 
 //Icono
 import icono from '..//../img/icono.png';
+import es from '../../img/es.png'
+import en from '../../img/en.png'
 
 
 
@@ -25,6 +27,7 @@ const Layout = () =>{
 
     const handleValue = (e) => {
         const valueSelect = e.target.value
+        console.log(valueSelect)
         changeLeng(valueSelect)
     }
 
@@ -75,7 +78,6 @@ const Layout = () =>{
                                     <option value="en">En</option>
                                 </select>
                             </div>
-
 
                             {/* Theme */}
                             <div className="form-check form-switch">

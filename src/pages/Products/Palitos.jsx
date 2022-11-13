@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { themeContext } from '../../context/themeContext';
 
 // Imagenes
 import bombon from '../../img/palitos/palito-bombon.jpg';
@@ -9,6 +10,9 @@ import fNaranja from '../../img/palitos/palitofrutal-naranja.jpg';
 import picoDulce from '../../img/palitos/PicoDulce.jpg';
 
 export default function Palitos() {
+
+  const {theme} = useContext(themeContext)
+
   const detPalitos = [
     {id: 1, name: 'Bombón', imgProd: bombon},
     {id: 2, name: 'Cremoso Americano', imgProd: cAmericano},
@@ -20,15 +24,15 @@ export default function Palitos() {
 
   return (
     <>
-      <h1 className="text-center mt-5 mb-5">Palitos</h1>
+      <h1 className={`text-center mt-5 text-${theme.color}`}>Palitos</h1>
       
-        <div className="container">
+        <div className="container mb-5 p-5">
         {/* <hr className="mb-5" /> */}
-        <div className="d-flex justify-content-center align-items-center flex-wrap gap-2 border rounded-5 p-4">
+        <div className="d-flex justify-content-evenly align-items-center flex-wrap border rounded-5 p-4">
           {detPalitos.map(dpa =>
             <div>
               <img className="rounded-4" src={dpa.imgProd} style={{width:"300px", height:"250px"}} alt="img" />
-              <h4 className="text-center">{dpa.name}</h4>
+              <h4 className={`text-center text-${theme.color}`}>{dpa.name}</h4>
             </div>
           )}
         </div>
