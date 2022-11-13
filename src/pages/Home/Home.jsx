@@ -1,6 +1,5 @@
 import React, {useContext} from 'react'
-import { themeContext } from '../../context/themeContext'
-// import Cards from './Cards'
+import {themeContext} from '../../context/themeContext'
 import Carousel from './Carousel'
 import Catalogue from './Catalogue'
 

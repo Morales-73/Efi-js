@@ -15,21 +15,21 @@ import Bombones from './pages/Products/Bombones';
 function App() {
   return (
     <>
-        <Routes>
-          <Route path='/' element={<Layout />}>
-            <Route path='/' element={<Home />}></Route>
-            <Route path='/productos' element={<Products />}></Route>
-            <Route path='/contacto' element={<Contacts />}></Route>
-            <Route path='/registrarse' element={<Registrarse />}></Route>
-            <Route path='*' element={<Soft404 />} />
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route path='/' element={<Home />}></Route>
+          <Route path='/productos' element={<Products />}></Route>
+          <Route path='/contacto' element={<Contacts />}></Route>
+          <Route path='/registrarse' element={<Registrarse />}></Route>
+          <Route path='*' element={<Soft404 />} />
 
-            <Route path='/productos/sabores' element={<Sabores />}></Route>
-            <Route path='/productos/postres' element={<Postres />}></Route>
-            <Route path='/productos/palitos' element={<Palitos />}></Route>
-            <Route path='/productos/bombones' element={<Bombones />}></Route>
+          <Route path='/productos/sabores' element={<Sabores />}></Route>
+          <Route path='/productos/postres' element={<Postres />}></Route>
+          <Route path='/productos/palitos' element={<Palitos />}></Route>
+          <Route path='/productos/bombones' element={<Bombones />}></Route>
 
-          </Route>
-        </Routes>
+        </Route>
+      </Routes>
     </>
 
   );

@@ -6,7 +6,6 @@ import carousel3 from '../../img/carousel/carousel-3.jpg'
 export default function Carousel() {
   return (
     <>
-      {/* carousel */}
       <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="true">
         <div className="carousel-indicators mb-5">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>

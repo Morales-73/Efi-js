@@ -1,11 +1,10 @@
-import React from 'react'
-import { useState } from 'react'
+import React, {useState} from 'react'
 
 const themeContext = React.createContext()
 
 function ThemeProvider({children}) {
 
-    const [theme, setTheme] = useState('white')
+    const [theme, setTheme] = useState({theme : "white", color : "dark"})
 
     const changeTheme = (theme)=> {
         switch (theme) {
