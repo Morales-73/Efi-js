@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 
 // Imagenes
 import anana from '../../img/sabores/anana.png';
@@ -15,11 +15,24 @@ import vainilla from '../../img/sabores/vainilla.png';
 import mentaGranizada from '../../img/sabores/menta-granizada.jpg';
 
 import { themeContext } from '../../context/themeContext';
+import { langcontext } from "../../context/langContext";
 
 
 export default function Sabores() {
 
   const {theme} = useContext(themeContext)
+
+  const {idioma, changeLeng} = useContext(langcontext)
+  const {items} = idioma
+
+  const [value,setValue] = useState('es')
+  const [valueSwitch,setValueSwitch] = useState(true)
+
+  const handleValue = (e) => {
+      const valueSelect = e.target.value
+      console.log(valueSelect)
+      changeLeng(valueSelect)
+    }
 
   const detSabores = [
     {id: 1, name: 'Anana', imgProd: anana},
@@ -38,7 +51,7 @@ export default function Sabores() {
 
   return (
     <>
-        <h1 className={`text-center mt-5 text-${theme.color}`}>Sabores</h1>
+        <h1 className={`text-center mt-5 text-${theme.color}`}>{items.sabores}</h1>
         <div className="container mb-5 p-5">
           {/* <hr className="mb-5" /> */}
           <div className="d-flex justify-content-evenly align-items-center flex-wrap border rounded-5 p-4">

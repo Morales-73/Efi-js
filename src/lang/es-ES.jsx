@@ -8,6 +8,25 @@ export const esp = {
         home : "Home",
         productos : "Productos",
         contacto : "Contacto",
-        registrarse : "Registrarse"
+        registrarse : "Registrarse",
+        contactanos: "Contactanos",
+        nombre: "Nombre",
+        email: "Email",
+        mensaje: "Mensaje",
+        enviar: "Enviar",
+        redes: "Seguinos en nuestras redes sociales",
+        nombreApellido: "Nombre y Apellido",
+        correo: "Correo Electronico",
+        contrasenia: "Contraseña",
+        repetirContrasenia: "Repita su contraseña",
+        estoyDeAcuerdo: "Estoy de acuerdo con todos los",
+        termino: "Terminos de servicio",
+        derecho: "Todos los derechos reservados",
+        nuestrosProductos: "Nuestros productos",
+        verMas: "Ver màs",
+        palitos: "Palitos",
+        sabores: "Sabores",
+        bombones: "Bombones",
+        postres: "Postres"
     }
 }

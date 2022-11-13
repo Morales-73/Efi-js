@@ -113,7 +113,7 @@ const Layout = () =>{
                         </a>
                     </div>
 
-                    <p className="mt-2">&copy; Todos los derechos reservados - 2022</p>
+                    <p className="mt-2">&copy; {items.derecho} - 2022</p>
                 </div>
             </div>
 

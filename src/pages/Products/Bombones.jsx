@@ -1,5 +1,6 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import { themeContext } from '../../context/themeContext';
+import { langcontext } from "../../context/langContext";
 
 // Imagenes
 import crocante from '../../img/bombones/bombon-crocante.jpg';
@@ -11,6 +12,18 @@ export default function Bombones() {
 
   const {theme} = useContext(themeContext)
 
+  const {idioma, changeLeng} = useContext(langcontext)
+  const {items} = idioma
+
+  const [value,setValue] = useState('es')
+  const [valueSwitch,setValueSwitch] = useState(true)
+
+  const handleValue = (e) => {
+      const valueSelect = e.target.value
+      console.log(valueSelect)
+      changeLeng(valueSelect)
+    }
+
   const detBombones = [
     {id: 1, name: 'Crocante', imgProd: crocante},
     {id: 2, name: 'Escoces', imgProd: escoces},
@@ -20,7 +33,7 @@ export default function Bombones() {
 
   return (
     <>
-      <h1 className={`text-center mt-5 text-${theme.color}`}>Bombones</h1>
+      <h1 className={`text-center mt-5 text-${theme.color}`}>{items.bombones}</h1>
       
         <div className="container mb-5 p-5">
         {/* <hr className="mb-5" /> */}

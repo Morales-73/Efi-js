@@ -1,21 +1,39 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
+
 import { themeContext } from '../../context/themeContext'
+import { langcontext } from "../../context/langContext";
+
 import Form from './Form'
 
 export default function Contacts() {
 
-  const {theme} = useContext(themeContext)
+    const {theme, changeTheme} = useContext(themeContext)
+    const {idioma, changeLeng} = useContext(langcontext)
+    const {items} = idioma
+
+    const [value,setValue] = useState('es')
+    const [valueSwitch,setValueSwitch] = useState(true)
+
+    const handleValue = (e) => {
+        const valueSelect = e.target.value
+        console.log(valueSelect)
+        changeLeng(valueSelect)
+    }
+
+  
+
+   
 
   return (
     <>
         <div className="row p-5 w-100 vh-100" style={{height:"100%"}}>
           <div className="col-6 border-end p-5 mb-5 rounded d-flex flex-column justify-content-center">
-            <h1 className={`fs-1 mb-5 text-${theme.color}`}>Contactanos</h1>
+            <h1 className={`fs-1 mb-5 text-${theme.color}`}>{items.contactanos}</h1>
             <Form/>
           </div>
 
           <div className="col-6 p-5 mb-5 d-flex flex-column justify-content-evenly align-items-center">
-            <h1 className={`fs-1 text-${theme.color}`}>Seguinos en nuestras redes sociales</h1>
+            <h1 className={`fs-1 text-${theme.color}`}>{items.redes}</h1>
             <div className="text-center">
               <a href="" target="_blank">
                 <svg className="me-5 bi bi-instagram" xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill={`${theme.color}`} viewBox="0 0 16 16">

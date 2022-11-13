@@ -1,14 +1,27 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState} from 'react'
 import {Link} from 'react-router-dom'
 import sabores from '../../img/sabores/helado_sabores.jpg';
 import postres from '../../img/postres/postre.jpg';
 import palitos from '../../img/palitos/palito_helado.jpg';
 import bombones from '../../img/bombones/bombones.jpg';
 import { themeContext } from '../../context/themeContext';
+// import { langcontext } from "../../context/langContext";
 
 export default function Catalogue() {
 
     const {theme} = useContext(themeContext)
+
+    // const {idioma, changeLeng} = useContext(langcontext)
+    // const {items} = idioma
+  
+    // const [value,setValue] = useState('es')
+    // const [valueSwitch,setValueSwitch] = useState(true)
+  
+    // const handleValue = (e) => {
+    //     const valueSelect = e.target.value
+    //     console.log(valueSelect)
+    //     changeLeng(valueSelect)
+    //   }
 
     const productos = [
         {id: 1, name:'sabores', titulo: 'Sabores' , imgProd: sabores},

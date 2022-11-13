@@ -1,5 +1,6 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import { themeContext } from '../../context/themeContext';
+import { langcontext } from "../../context/langContext";
 
 // Imagenes
 import bombon from '../../img/palitos/palito-bombon.jpg';
@@ -13,6 +14,19 @@ export default function Palitos() {
 
   const {theme} = useContext(themeContext)
 
+  const {idioma, changeLeng} = useContext(langcontext)
+  const {items} = idioma
+
+  const [value,setValue] = useState('es')
+  const [valueSwitch,setValueSwitch] = useState(true)
+
+  const handleValue = (e) => {
+      const valueSelect = e.target.value
+      console.log(valueSelect)
+      changeLeng(valueSelect)
+    }
+
+
   const detPalitos = [
     {id: 1, name: 'Bombón', imgProd: bombon},
     {id: 2, name: 'Cremoso Americano', imgProd: cAmericano},
@@ -24,7 +38,7 @@ export default function Palitos() {
 
   return (
     <>
-      <h1 className={`text-center mt-5 text-${theme.color}`}>Palitos</h1>
+      <h1 className={`text-center mt-5 text-${theme.color}`}>{items.palitos}</h1>
       
         <div className="container mb-5 p-5">
         {/* <hr className="mb-5" /> */}

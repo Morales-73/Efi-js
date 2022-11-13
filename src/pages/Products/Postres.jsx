@@ -1,5 +1,6 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import { themeContext } from '../../context/themeContext';
+import { langcontext } from "../../context/langContext";
 
 // Imagenes
 import postreAlmendra from '../../img/postres/postres-almendrado.jpg';
@@ -15,6 +16,18 @@ export default function Postres() {
 
   const {theme} = useContext(themeContext)
 
+  const {idioma, changeLeng} = useContext(langcontext)
+  const {items} = idioma
+
+  const [value,setValue] = useState('es')
+  const [valueSwitch,setValueSwitch] = useState(true)
+
+  const handleValue = (e) => {
+      const valueSelect = e.target.value
+      console.log(valueSelect)
+      changeLeng(valueSelect)
+    }
+
   const detPostres = [
     {id: 1, name: 'Almendrado', imgProd: postreAlmendra},
     {id: 2, name: 'Cassata', imgProd: cassata},
@@ -28,7 +41,7 @@ export default function Postres() {
 
   return (
     <>
-      <h1 className={`text-center mt-5 text-${theme.color}`}>Postres</h1>
+      <h1 className={`text-center mt-5 text-${theme.color}`}>{items.postres}</h1>
       
         <div className="container mb-5 p-5">
         {/* <hr className="mb-5" /> */}
