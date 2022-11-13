@@ -21,7 +21,7 @@ export default function Catalogue() {
     <>
         <div className="container h-100">
             <div className="border p-4 rounded-2 mt-5 mb-5">
-                <h1 className={`fs-3 text-${theme.color}`}>Nuestros productos</h1>
+                <h1 className={`mb-4 text-center fs-3 text-${theme.color}`}>Nuestros productos</h1>
                 <div className="d-flex justify-content-center align-items-center flex-wrap gap-4">
                     {productos.map(p =>
                         <div className="card" style={{ width: "18rem"}} key={p.id}>
