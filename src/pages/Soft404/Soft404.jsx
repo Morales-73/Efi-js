@@ -1,5 +1,5 @@
 // Error 404
-import error from '../../img/error404.png';
+import error from '../../img/error404en.png';
 
 function Soft404(){
     return(<div>
