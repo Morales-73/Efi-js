@@ -44,11 +44,14 @@ const Layout = () =>{
                         </div>
 
                         {/* Items */}
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
-                        <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-                            <ul className="navbar-nav m-auto mb-2 mb-lg-0">
+                        <div>
+                            <button className="navbar-toggler bg-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                                <span className="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+
+                        <div className="collapse navbar-collapse py-3" id="navbarTogglerDemo02">
+                            <ul className="navbar-nav m-auto mb-3 mb-lg-0">
                                 <li className="nav-item me-2">
                                     <Link to={"/"} className={`text-decoration-none text-${theme.color} fs-5 me-5`}>{paginas[0].home}</Link>
                                 </li>
@@ -62,11 +65,27 @@ const Layout = () =>{
                                     <Link to={"/registrarse"} className={`text-decoration-none text-${theme.color} fs-5`}>{paginas[2].registrarse}</Link>
                                 </li>
                             </ul>
+
+                            {/* Collapse Navbar */}
+                            <div className="d-flex align-items-center">
+                                {/* Idiomas */}
+                                <div className="me-4 d-lg-block d-lg-none">
+                                    <select name="" id="" onChange={handleValue} className="form-control rounded-5 border-dark bg-white">
+                                        <option value="es" defaultValue>Es</option>
+                                        <option value="en">En</option>
+                                    </select>
+                                </div>
+
+                                {/* Theme */}
+                                <div className="form-check form-switch d-lg-block d-lg-none">
+                                    <input className="form-check-input border-none" onClick={handleSwitch} style={{ height: "35px", width: "50px" }} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                                </div>
+                            </div>
                         </div>
 
                         <div className="d-flex align-items-center">
                             {/* Idiomas */}
-                            <div className="me-4">
+                            <div className="me-4 d-none d-lg-block">
                                 <select name="" id="" onChange={handleValue} className="form-control rounded-5 border-dark bg-white">
                                     <option value="es" defaultValue>Es</option>
                                     <option value="en">En</option>
@@ -74,7 +93,7 @@ const Layout = () =>{
                             </div>
 
                             {/* Theme */}
-                            <div className="form-check form-switch">
+                            <div className="form-check form-switch d-none d-lg-block">
                                 <input className="form-check-input border-none" onClick={handleSwitch} style={{ height: "35px", width: "50px" }} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
                             </div>
                         </div>

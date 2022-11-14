@@ -19,7 +19,7 @@ export default function Bombones() {
         <div className="d-flex justify-content-evenly align-items-center flex-wrap border rounded-5 p-4">
           {bombones.map(b =>
             <div key={b.id}>
-              <img className="rounded-4" src={b.img} style={{width:"300px", height:"250px"}} alt="img" />
+              <img className="rounded-4 img-fluid" src={b.img} style={{width:"300px", height:"250px"}} alt="img" />
               <h4 className={`text-center text-${theme.color}`}>{b.name}</h4>
             </div>
           )}

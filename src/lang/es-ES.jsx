@@ -91,7 +91,7 @@ export const esp = {
         {id: 3, name: 'Split', img: split},
         {id: 4, name: 'Suizo', img: suizo}
     ],
-    contactanos: "Contactanos",
+    contactanos: "Dejanos tu mensaje",
     nombre: "Nombre",
     email: "Email",
     mensaje: "Mensaje",

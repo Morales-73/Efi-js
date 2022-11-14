@@ -91,7 +91,7 @@ export const eng = {
         {id: 3, name: 'Split', img: split},
         {id: 4, name: 'Swiss', img: suizo}
     ],
-    contactanos: "Contact us",
+    contactanos: "Leave us your message",
     nombre: "Name",
     email: "E-mail",
     mensaje: "Menssage",
