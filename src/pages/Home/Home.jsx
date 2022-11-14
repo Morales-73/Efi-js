@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <div className={`bg-${theme.theme}`}>
         <Carousel/>
-        {/* <Cards/> */}
+        
         <Catalogue/>
       </div>
     </>
